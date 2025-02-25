@@ -1,0 +1,26 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Inherited by all child elements */
+    color: #333; /* Dark gray for readability, inherited by text elements */
+    background-color: rgb(236, 199, 130); /* Background color (Chapter 11, p. 246) */
+    font-size: 150%; /* Base font size for readability (Chapter 12, p. 264) */
+}
+
+/* Headings inherit font-family and color but have a different font size */
+h2 {
+    font-size: 22px; /* Larger than body text for emphasis (Chapter 12, p. 264) */
+}
+
+/* Paragraphs inherit font-family, font size, and color */
+p {
+    line-height: 1.5; /* Improves readability */
+}
+
+/* Links inherit text color but have their own style */
+a {
+    color: #0066cc; /* Blue link color for contrast (Chapter 11, p. 246) */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

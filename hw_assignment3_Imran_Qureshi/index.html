@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Imran Qureshi">
+    <title>Assignment 3 - Imran Qureshi</title>
+
+    <!--
+      Chapter 10 Reference (p. 226): Linking to an external stylesheet.
+      The external CSS file 'style.css' is linked below to apply consistent styles across multiple pages.
+    -->
+    <link href="style.css" type="text/css" rel="stylesheet">
+
+    <!--
+      Chapter 10 Reference: Using internal CSS to style elements globally within this file.
+      The rule below ensures the <body> has a specific font family and background color.
+    -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+        }
+        h2 {
+            color: rgb(138, 21, 56);
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <!--
+      Chapter 11 Reference (p. 246): Using inline CSS to style the <h1> element.
+      Inline styles override internal and external styles due to higher specificity.
+    -->
+    <h1 style="color: darkgreen; font-style: italic; text-align: center;">National Colors of Qatar vs Saudi Arabia</h1>
+    
+    <h2>Qatar's National Color</h2>
+    <p style="font-size: 105%; color: rgb(138, 21, 56);">
+        The national color of Qatar is an exotic maroon that is highlighted on its national flag.
+        It originates from the purple dye industry that Qatar is known for throughout its history, 
+        as well as differentiating itself from the usual flag colors such as black and red usually seen throughout the region.
+        This paragraph demonstrates <strong>inheritance</strong>: Since the font family is set in the <body>, it applies here automatically.
+    </p>
+    
+    <h2>Saudi Arabia's National Color</h2>
+    <p style="font-size: 105%; color: rgb(0, 84, 48);">
+        Saudi Arabia, on the other hand, uses a very rich green for its iconic flag color 
+        due to its association with Islam and the various empires that governed the Arabian Peninsula over the centuries.
+    </p>
+    
+    <!--
+      Chapter 10 Concept: Cascade and Specificity
+      The styles applied in external, internal, and inline CSS demonstrate how cascade rules prioritize them.
+      Here, inline styles on <h1> override internal/external styles, while internal styles apply when no inline styles exist.
+    -->
+    <footer>
+        <p>Even though Saudi Arabia and Qatar use vastly different colors to contrast the white color on both of their flags, 
+        they both look equally beautiful in real life.</p>
+    </footer>
+</body>
+</html>
