@@ -3,25 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Imran Qureshi">
+    <meta name="description" content="HTML webpage using CSS">
     <title>Assignment 3 - Imran Qureshi</title>
-
-    <!--
-      Chapter 10 Reference (p. 226): Linking to an external stylesheet.
-      The external CSS file 'style.css' is linked below to apply consistent styles across multiple pages.
-    -->
+    
+    <!--Chapter 10: Linking to an external stylesheet.
+      The external CSS file style.css is linked below to apply the consistent styles desired across multiple pages.-->
     <link href="style.css" type="text/css" rel="stylesheet">
-
-    <!--
-      Chapter 10 Reference: Using internal CSS to style elements globally within this file.
-      The rule below ensures the <body> has a specific font family and background color.
-    -->
+    
+    <!--Chapter 10: Here I am using internal CSS to style specific elements within this file, such as the text indent, 
+    which overrides the external stylesheet attached.
+      The rule below ensures the <body> has a specific font family and background color 
+        as well as the specified parameters for the <h2> headding and footer.-->
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 20px;
-            padding: 20px;
+            text-indent: 50px;
         }
         h2 {
             color: rgb(138, 21, 56);
@@ -29,41 +24,44 @@
         }
         footer {
             text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #ddd;
         }
     </style>
 </head>
 <body>
-    <!--
-      Chapter 11 Reference (p. 246): Using inline CSS to style the <h1> element.
-      Inline styles override internal and external styles due to higher specificity.
-    -->
-    <h1 style="color: darkgreen; font-style: italic; text-align: center;">National Colors of Qatar vs Saudi Arabia</h1>
+    <!-- Chapter 11: Here I am using inline CSS to style the <h2> element to my liking, 
+        such as to change the color to the specific RGB color to the one I'm referring to.
+      Inline styles override internal and external styles due to higher specificity, 
+      highlighting cascading rules in CSS.-->
+    <div class="header">
+        <h1 style="font-style: italic; text-align: center; text-indent: 0px;">National Colors of Qatar vs Saudi Arabia</h1>
+    </div>
     
-    <h2>Qatar's National Color</h2>
-    <p style="font-size: 105%; color: rgb(138, 21, 56);">
-        The national color of Qatar is an exotic maroon that is highlighted on its national flag.
-        It originates from the purple dye industry that Qatar is known for throughout its history, 
-        as well as differentiating itself from the usual flag colors such as black and red usually seen throughout the region.
-        This paragraph demonstrates <strong>inheritance</strong>: Since the font family is set in the <body>, it applies here automatically.
-    </p>
+    <div class="content">
+        <div class="section">
+            <h2 style="text-indent: 0px;">Qatar's National Color</h2>
+            <p style="font-size: 105%; color: rgb(138, 21, 56);">
+                The national color of Qatar is an exotic maroon visualized by the exact color of this text that is highlighted on its national flag.
+                It originates from the purple dye industry that Qatar is known for throughout its history, 
+                as well as differentiating itself from the usual flag colors such as black and red usually seen throughout the region.
+            </p>
+        </div>
     
-    <h2>Saudi Arabia's National Color</h2>
-    <p style="font-size: 105%; color: rgb(0, 84, 48);">
-        Saudi Arabia, on the other hand, uses a very rich green for its iconic flag color 
-        due to its association with Islam and the various empires that governed the Arabian Peninsula over the centuries.
-    </p>
+        <div class="section">
+            <h2 style="color: rgb(0, 84, 48);text-indent: 0px;">Saudi Arabia's National Color</h2>
+            <p style="font-size: 105%; color: rgb(0, 84, 48);">
+                Saudi Arabia, on the other hand, uses a very rich green visualized by the exact color of this text for its iconic flag color 
+                due to its association with Islam and the various empires that governed the Arabian Peninsula over the centuries.
+            </p>
+        </div>
+        <!-- Chapter 10: The styles applied in external, internal, and inline CSS demonstrate how cascade rules prioritize them in an HTML file.
+          Here, inline styles on <h2> override internal/external styles, while the internal styles defined in the body apply when no inline styles exist.-->
+    </div>
     
-    <!--
-      Chapter 10 Concept: Cascade and Specificity
-      The styles applied in external, internal, and inline CSS demonstrate how cascade rules prioritize them.
-      Here, inline styles on <h1> override internal/external styles, while internal styles apply when no inline styles exist.
-    -->
-    <footer>
-        <p>Even though Saudi Arabia and Qatar use vastly different colors to contrast the white color on both of their flags, 
-        they both look equally beautiful in real life.</p>
-    </footer>
+    <div class="footer">
+        <footer>
+            <p>Even though Saudi Arabia and Qatar use vastly different colors to contrast the white color on both of their flags, 
+                they both look equally beautiful in real life. *2025 My Demo Site*</p>
+        </footer>
+    </div>
 </body>
 </html>

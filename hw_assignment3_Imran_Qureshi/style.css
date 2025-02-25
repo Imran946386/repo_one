@@ -1,26 +1,19 @@
+/* External CSS File - Consistent Styling Across Multiple Pages in an HTML File (Chapter 10) */
+
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif; /* Inherited by all child elements */
-    color: #333; /* Dark gray for readability, inherited by text elements */
-    background-color: rgb(236, 199, 130); /* Background color (Chapter 11, p. 246) */
-    font-size: 150%; /* Base font size for readability (Chapter 12, p. 264) */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* This font family and all other parameters in the body will be inherited by all child elements; 
+    Font is also chosen to help improve readability. (Chapter 12) */
+    color: #333; /* Dark gray is an appropriate color for readability. (Chapter 11) */
+    background-color: rgb(236, 199, 130); /* Desert Orange Background color to be easy on the eyes. (Chapter 11) */
+    font-size: 150%; /* Base font size for readability and convenience. (Chapter 12)*/ 
 }
 
-/* Headings inherit font-family and color but have a different font size */
+/* The headings will inherit font-family and color from the body but will have a different font size. */
 h2 {
-    font-size: 22px; /* Larger than body text for emphasis (Chapter 12, p. 264) */
+    font-size: 160%; /* Larger than body text for emphasis on core sections. (Chapter 12) */ 
 }
 
-/* Paragraphs inherit font-family, font size, and color */
+/* Paragraphs inherit font-family, font size, and color. (Chapter 12)*/
 p {
-    line-height: 1.5; /* Improves readability */
-}
-
-/* Links inherit text color but have their own style */
-a {
-    color: #0066cc; /* Blue link color for contrast (Chapter 11, p. 246) */
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    line-height: 1.5; /* Line spacing improves readability. (Chapter 12) */
 }
