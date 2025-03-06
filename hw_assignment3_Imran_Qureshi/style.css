@@ -6,7 +6,6 @@ body {
     color: #333; /* Dark gray is an appropriate color for readability. (Chapter 11) */
     background-color: rgb(236, 199, 130); /* Desert Orange Background color to be easy on the eyes. (Chapter 11) */
     font-size: 150%; /* Base font size for readability and convenience. (Chapter 12)*/ 
-    background-image: url(images/saudiQatar_vb_27.gif);
 }
 
 /* The headings will inherit font-family and color from the body but will have a different font size. */
