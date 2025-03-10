@@ -1,6 +1,6 @@
 body {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
     margin: 0;
     padding: 0;
 }
@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
     background-color: rgb(15, 217, 210);
     padding: 15px;
 }
@@ -32,20 +32,15 @@ body {
     grid-template-columns: 1fr;
     background-color: rgb(255, 18, 18);
     min-height: 60vh;
-    text-align: right;
-    padding: 15px;
-}
-
-.homepage {
-    display: grid;
-    grid-template-columns: 3fr;
-    background-color: darkorange;
     text-align: center;
     padding: 15px;
 }
 
-.main-content {
+.homepage, .main-content {
+    display: grid;
+    grid-template-columns: 3fr;
     background-color: darkorange;
+    text-align: left;
     padding: 15px;
     min-height: 60vh;
 }
