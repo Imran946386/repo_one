@@ -9,7 +9,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    grid-template-columns: repeat(4, 1fr);
     background-color: rgb(15, 217, 210);
     padding: 15px;
 }
@@ -27,30 +26,30 @@ body {
     font-weight: bold;
 }
 
-.sidebar {
+/*Common parent styling properties for sidebar and homepage/main-content selectors.*/
+.sidebar, .homepage, .main-content {
     display: grid;
+    padding: 15px;
+    text-align: left;
+    min-height: 60vh; /*Ensures main sections take up at least 60% of the viewport height.*/
+}
+
+.sidebar {
     grid-template-columns: 1fr;
     background-color: rgb(255, 18, 18);
-    min-height: 60vh;
-    text-align: left;
-    padding: 15px;
 }
 
 .homepage, .main-content {
-    display: grid;
     grid-template-columns: 3fr;
     background-color: darkorange;
-    text-align: left;
-    padding: 15px;
-    min-height: 60vh;
 }
 
-.main-content p, .sidebar h2 {
-    margin-bottom: 0px;  /*For close spacing between header and paragraph.*/
+.main-content h2, .sidebar h2 {
+    margin-bottom: 15px; /*For close spacing between header and paragraph.*/
 }
 
 .main-content p, .sidebar p {
-    margin-top: -125px;  /*For close spacing between header and paragraph.*/
+    margin-top: -135px; /*For close spacing between header and paragraph.*/
 }
 
 .footer {
@@ -59,7 +58,7 @@ body {
     background-color: rgb(28, 209, 28);
     text-align: center;
     padding: 15px;
-    min-height: 10vh;
+    min-height: 10vh; /*Ensures footer takes up at least 10% of the viewport height.*/
 }
 
 @media (max-width: 768px) {
