@@ -1,0 +1,80 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navigationbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(15, 217, 210);
+    padding: 15px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    padding: 15px;
+}
+
+.box {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*Common parent styling properties for sidebar and homepage/main-content selectors.*/
+.sidebar, .homepage, .main-content {
+    display: grid;
+    padding: 15px;
+    text-align: left;
+    min-height: 90vh; /*Ensures main sections take up at least 60% of the viewport height.*/
+}
+
+.sidebar {
+    grid-template-columns: 1fr;
+    background-color: rgb(255, 18, 18);
+}
+
+.homepage, .main-content {
+    grid-template-columns: 3fr;
+    background-color: darkorange;
+}
+
+.main-content h2, .sidebar h2 {
+    margin-bottom: 15px; /*For close spacing between header and paragraph.*/
+}
+
+.main-content p, .sidebar p {
+    margin-top: -135px; /*For close spacing between header and paragraph.*/
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 4fr;
+    background-color: rgb(28, 209, 28);
+    text-align: center;
+    padding: 15px;
+    min-height: 10vh; /*Ensures footer takes up at least 10% of the viewport height.*/
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
