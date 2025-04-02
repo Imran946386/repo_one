@@ -3,78 +3,96 @@ body {
     font-size: 20px;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s ease; /* Add smooth transition for background color changes */
 }
 
 .navigationbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(15, 217, 210);
-    padding: 15px;
+    background-color:#607D94;
+    padding: 30px;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 10px;
-    padding: 15px;
+    grid-template-columns: 3fr 1fr; /* Adjusted ratio for better layout */
+    gap: 20px;
+    padding: 20px;
 }
 
 .box {
-    padding: 15px;
+    color: #FEFFFA;
     text-align: center;
     font-weight: bold;
 }
 
-/*Common parent styling properties for sidebar and homepage/main-content selectors.*/
 .sidebar, .homepage, .main-content {
     display: grid;
-    padding: 15px;
+    padding: 20px;
     text-align: left;
-    min-height: 90vh; /*Ensures main sections take up at least 60% of the viewport height.*/
+    min-height: 90vh;
+    background-color: #FFF6D0;
+    border-radius: 8px; /* Add rounded corners */
 }
 
 .sidebar {
     grid-template-columns: 1fr;
-    background-color: rgb(255, 18, 18);
+    max-width:70%
 }
 
 .homepage, .main-content {
-    grid-template-columns: 3fr;
-    background-color: darkorange;
+    grid-template-columns: 1fr;
+    max-width: 95%;
 }
 
 .main-content h2, .sidebar h2 {
-    margin-bottom: 15px; /*For close spacing between header and paragraph.*/
+    margin-bottom: 20px;
+    ;
 }
 
 .main-content p, .sidebar p {
-    margin-top: -135px; /*For close spacing between header and paragraph.*/
+    margin-top: 0; 
+    line-height: 1.6;
 }
 
 .footer {
     display: grid;
-    grid-template-columns: 4fr;
-    background-color: rgb(28, 209, 28);
+    grid-template-columns: 1fr;
+    background-color: #FFF6D0; 
     text-align: center;
     padding: 15px;
-    min-height: 10vh; /*Ensures footer takes up at least 10% of the viewport height.*/
+    min-height: 10vh;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
     .container {
         grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    body {
+        font-size: 18px;
     }
 }
 
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    body {
+        font-size: 16px;
+        padding: 10px;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 480px) {
     .container {
         grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    body {
+        font-size: 14px;
+        padding: 5px;
     }
 }
