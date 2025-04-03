@@ -7,59 +7,60 @@ body {
 }
 .navigationbar {
     display: flex; /* Enables flexbox layout for flexible layout control */
-    justify-content: space-between; /* Spreads items across container, creates balanced navigation */
-    align-items: center; /* Horizontally centers items, ensures visual alignment */
-    background-color: #607D94; /* Blue-gray background that is easy on the eyes */
-    padding: 30px; /* Spacing around content, improves clickability and appearance */
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #607D94; 
+    padding: 30px; 
 }
 .container {
     display: grid; /* Enables grid layout, allows responsive layouts */
     grid-template-columns: 2fr 1fr; /* Creates 2:1 column ratio, optimizes content hierarchy */
-    gap: 20px; /* Space between grid items, improves readability */
-    padding: 20px; /* Container padding, prevents content from touching edges */
+    gap: 20px; 
+    padding: 20px; 
 }
 .box {
-    color: #FEFFFA; /* Off-white text color, ensures readability on dark backgrounds */
+    color: #FEFFFA; 
     font-weight: bold; /* Bold text, emphasizes important content */
 }
 .sidebar, .homepage, .main-content {
-    display: grid; /* Enables grid layout, allows responsive layouts */
-    padding: 20px; /* Internal spacing, improves content legibility */
-    text-align: left; /* Left text alignment, enhances readability */
-    background-color: #FFF6D0; /* Light yellow background, creates visual sections */
+    display: grid; 
+    padding: 20px; 
+    text-align: left; 
+    background-color: #FFF6D0; 
     border-radius: 8px; /* Rounded corners, softens visual appearance */
     overflow-wrap: break-word; /* Text wrapping, prevents layout breaks from long content */
 }
 .sidebar {
     display: flex; /* Enables flexbox for sidebar, allows vertical stacking */
     flex-direction: column; /* Stacks items vertically, organizes sidebar content */
-    gap: 10px; /* Space between sidebar items, improves visual separation */
+    gap: 10px; 
 }
 .sidebar ul {
     padding-left: 20px; /* List indentation, maintains standard list appearance */
-    margin: 0; /* Removes default margin, prevents extra spacing */
+    margin: 0; 
     line-height: 1.6; /* Improves readability, makes text more comfortable to read */
 }
 .sidebar li {
     margin-bottom: 10px; /* Space between list items, improves readability */
-    line-height: 1.6; /* Improves readability, makes text more comfortable to read */
+    line-height: 1.6; 
 }
 .car-image {
     max-width: 100%; /* Responsive image width, ensures images fit containers */
     height: auto; /* Maintains aspect ratio, prevents image distortion */
     margin: 20px 0; /* Vertical spacing, separates images from text */
+    border-radius: 8px; /* Rounded corners, softens visual appearance */
 }
 .main-content h2, .sidebar h2 {
     margin: 0 0 10px; /* Bottom margin for headings, creates visual hierarchy */
 }
 .main-content p, .sidebar p {
-    line-height: 1.6; /* Improves readability, makes text more comfortable to read */
-    margin: 0 0 10px; /* Bottom margin for headings, creates visual hierarchy */
+    line-height: 1.6; 
+    margin: 0 0 10px; 
 }
 .footer {
-    background-color: #FFF6D0; /* Matches content background, maintains design consistency */
-    text-align: center; /* Center-aligned text for a more professional look */
-    padding: 30px; /* Footer padding, creates comfortable spacing */
+    background-color: #FFF6D0; 
+    text-align: center; 
+    padding: 30px; 
     min-height: 10vh; /* Minimum footer height, ensures footer visibility */
 }
 @media (max-width: 1024px) {
@@ -77,15 +78,15 @@ body {
     }
     body {
         font-size: 16px; /* Smaller text for small tablets, ensures comfortable reading */
-        padding: 10px; /* Added body padding, maintains content spacing */
+        padding: 10px; 
     }
 }
 @media (max-width: 480px) {
     .container {
-        gap: 8px; /* Minimal grid gap, maximizes content space on mobile */
+        gap: 8px; 
     }
     body {
-        font-size: 14px; /* Smallest text for mobile, optimizes for small screens */
-        padding: 5px; /* Minimal body padding, maximizes viewing area */
+        font-size: 14px; 
+        padding: 5px; 
     }
 }
