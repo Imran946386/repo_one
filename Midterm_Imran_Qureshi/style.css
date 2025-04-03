@@ -1,98 +1,91 @@
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s ease; /* Add smooth transition for background color changes */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Sets system font stack, ensures text consistency across devices */
+    font-size: 20px; /* Base font size, establishes readable text scale */
+    margin: 0; /* Removes default margin, prevents unwanted spacing */
+    padding: 0; /* Removes default padding, ensures clean layout */
+    transition: background-color 0.3s ease; /* Smooth background transitions, improves user experience */
 }
-
 .navigationbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:#607D94;
-    padding: 30px;
+    display: flex; /* Enables flexbox layout for flexible layout control */
+    justify-content: space-between; /* Spreads items across container, creates balanced navigation */
+    align-items: center; /* Horizontally centers items, ensures visual alignment */
+    background-color: #607D94; /* Blue-gray background that is easy on the eyes */
+    padding: 30px; /* Spacing around content, improves clickability and appearance */
 }
-
 .container {
-    display: grid;
-    grid-template-columns: 3fr 1fr; /* Adjusted ratio for better layout */
-    gap: 20px;
-    padding: 20px;
+    display: grid; /* Enables grid layout, allows responsive layouts */
+    grid-template-columns: 2fr 1fr; /* Creates 2:1 column ratio, optimizes content hierarchy */
+    gap: 20px; /* Space between grid items, improves readability */
+    padding: 20px; /* Container padding, prevents content from touching edges */
 }
-
 .box {
-    color: #FEFFFA;
-    text-align: center;
-    font-weight: bold;
+    color: #FEFFFA; /* Off-white text color, ensures readability on dark backgrounds */
+    font-weight: bold; /* Bold text, emphasizes important content */
 }
-
 .sidebar, .homepage, .main-content {
-    display: grid;
-    padding: 20px;
-    text-align: left;
-    min-height: 90vh;
-    background-color: #FFF6D0;
-    border-radius: 8px; /* Add rounded corners */
+    display: grid; /* Enables grid layout, allows responsive layouts */
+    padding: 20px; /* Internal spacing, improves content legibility */
+    text-align: left; /* Left text alignment, enhances readability */
+    background-color: #FFF6D0; /* Light yellow background, creates visual sections */
+    border-radius: 8px; /* Rounded corners, softens visual appearance */
+    overflow-wrap: break-word; /* Text wrapping, prevents layout breaks from long content */
 }
-
 .sidebar {
-    grid-template-columns: 1fr;
-    max-width:70%
+    display: flex; /* Enables flexbox for sidebar, allows vertical stacking */
+    flex-direction: column; /* Stacks items vertically, organizes sidebar content */
+    gap: 10px; /* Space between sidebar items, improves visual separation */
 }
-
-.homepage, .main-content {
-    grid-template-columns: 1fr;
-    max-width: 95%;
+.sidebar ul {
+    padding-left: 20px; /* List indentation, maintains standard list appearance */
+    margin: 0; /* Removes default margin, prevents extra spacing */
+    line-height: 1.6; /* Improves readability, makes text more comfortable to read */
 }
-
+.sidebar li {
+    margin-bottom: 10px; /* Space between list items, improves readability */
+    line-height: 1.6; /* Improves readability, makes text more comfortable to read */
+}
+.car-image {
+    max-width: 100%; /* Responsive image width, ensures images fit containers */
+    height: auto; /* Maintains aspect ratio, prevents image distortion */
+    margin: 20px 0; /* Vertical spacing, separates images from text */
+}
 .main-content h2, .sidebar h2 {
-    margin-bottom: 20px;
-    ;
+    margin: 0 0 10px; /* Bottom margin for headings, creates visual hierarchy */
 }
-
 .main-content p, .sidebar p {
-    margin-top: 0; 
-    line-height: 1.6;
+    line-height: 1.6; /* Improves readability, makes text more comfortable to read */
+    margin: 0 0 10px; /* Bottom margin for headings, creates visual hierarchy */
 }
-
 .footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    background-color: #FFF6D0; 
-    text-align: center;
-    padding: 15px;
-    min-height: 10vh;
+    background-color: #FFF6D0; /* Matches content background, maintains design consistency */
+    text-align: center; /* Center-aligned text for a more professional look */
+    padding: 30px; /* Footer padding, creates comfortable spacing */
+    min-height: 10vh; /* Minimum footer height, ensures footer visibility */
 }
-
 @media (max-width: 1024px) {
     .container {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        grid-template-columns: 1fr; /* Single column layout, adapts to laptops */
+        gap: 15px; /* Reduced grid gap, optimizes space on smaller screens */
     }
     body {
-        font-size: 18px;
+        font-size: 18px; /* Smaller text for tablets, maintains readability */
     }
 }
-
 @media (max-width: 768px) {
     .container {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 10px; /* Further reduced grid gap, conserves space on tablets */
     }
     body {
-        font-size: 16px;
-        padding: 10px;
+        font-size: 16px; /* Smaller text for small tablets, ensures comfortable reading */
+        padding: 10px; /* Added body padding, maintains content spacing */
     }
 }
-
 @media (max-width: 480px) {
     .container {
-        grid-template-columns: 1fr;
-        gap: 8px;
+        gap: 8px; /* Minimal grid gap, maximizes content space on mobile */
     }
     body {
-        font-size: 14px;
-        padding: 5px;
+        font-size: 14px; /* Smallest text for mobile, optimizes for small screens */
+        padding: 5px; /* Minimal body padding, maximizes viewing area */
     }
 }
