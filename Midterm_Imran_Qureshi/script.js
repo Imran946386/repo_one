@@ -5,4 +5,4 @@ document.addEventListener('DOMContentLoaded', function() { // Event lister for D
     const colorChoice = prompt("Pick a background color: 0 for Red, 1 for Gray, 2 for Yellow");
     const userInfo = {name: userName, selectedColor: colors[colorChoice]};
     document.body.style.backgroundColor = userInfo.selectedColor;
-});
+})
