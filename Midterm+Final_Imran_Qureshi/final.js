@@ -1,4 +1,5 @@
 // Check and retrieve cookie values
+document.addEventListener('DOMContentLoaded', function() {
 function getCookie(name) {
     const cookies = document.cookie.split('; ');
     for (let c of cookies) {
@@ -28,4 +29,4 @@ function getCookie(name) {
     document.body.style.backgroundColor = "#ffffff";
     document.body.style.color = "#121212";
     }
-    
+});
