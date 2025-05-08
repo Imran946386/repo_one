@@ -18,8 +18,14 @@ function getCookie(name) {
     }
     // Apply personalized greeting
     const welcome = document.getElementById("welcome-message");
+    console.log('Welcome element:', welcome);
+    console.log('Username:', userName);
+    
     if (welcome && userName) {
-    welcome.textContent = `Great to see you again, ${userName}`;
+        welcome.textContent = `Great to see you again, ${userName}`;
+        console.log('Greeting updated');
+    } else {
+        console.log('Could not update greeting: welcome=', welcome, 'userName=', userName);
     }
     // Apply theme
     if (userTheme === 'dark') {
