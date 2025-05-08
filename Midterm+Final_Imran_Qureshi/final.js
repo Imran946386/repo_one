@@ -17,13 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
         userTheme = prompt("Choose your theme (dark/light):").toLowerCase();
         document.cookie = `name=${userName}; max-age=${60 * 60 * 24 * 7}; path=/`;
         document.cookie = `theme=${userTheme}; max-age=${60 * 60 * 24 * 7}; path=/`;
+        // Show alert immediately for new users
+        alert(`Great to see you again, ${userName}`);
+        sessionStorage.setItem('greeted', 'true');
+    } else if (!sessionStorage.getItem('greeted')) {
+        // Show alert for returning users only once per session
+        alert(`Great to see you again, ${userName}`);
+        sessionStorage.setItem('greeted', 'true');
     }
-
-    window.onload = function() {
-        if (userName) {
-            alert(`Great to see you again, ${userName}`);
-        }
-    };
 
     // Apply theme
     if (userTheme === 'dark') {
