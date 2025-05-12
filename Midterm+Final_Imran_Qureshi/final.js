@@ -1,31 +1,28 @@
-// Check and retrieve cookie values
+// Check and retrieve cookie values (for backward compatibility)
 document.addEventListener('DOMContentLoaded', function() {
-    function getCookie(name) {
-        const cookies = document.cookie.split('; ');
-        for (let c of cookies) {
-            const [key, value] = c.split('=');
-            if (key === name) return decodeURIComponent(value);
-        }
-        return null;
+function getCookie(name) {
+    const cookies = document.cookie.split('; ');
+    for (let c of cookies) {
+        const [key, value] = c.split('=');
+        if (key === name) return decodeURIComponent(value);
     }
-    
-    let userName = getCookie('name');
-    let userTheme = getCookie('theme');
-    
+    return null;
+}
+    let userName = localStorage.getItem('name');
+    let userTheme = localStorage.getItem('theme');
     if (!userName || !userTheme) {
+        // First-time visitor
         userName = prompt("Welcome to my website! Please enter your name:");
-        userTheme = prompt("Choose your theme (dark/light):").toLowerCase();
-        document.cookie = `name=${userName}; max-age=${60 * 60 * 24 * 7}; path=/`;
-        document.cookie = `theme=${userTheme}; max-age=${60 * 60 * 24 * 7}; path=/`;
-        // Show alert immediately for new users
+        userTheme = prompt("Choose your preferred theme (dark/light):").toLowerCase();
+        localStorage.setItem('name', userName);
+        localStorage.setItem('theme', userTheme);
         alert(`Great to see you, ${userName}`);
-        sessionStorage.setItem('greeted', 'true');
-    } else if (!sessionStorage.getItem('greeted')) {
-        // Show alert for returning users only once per session
-        alert(`Great to see you again, ${userName}`);
-        sessionStorage.setItem('greeted', 'true');
     }
-
+    // Apply personalized greeting
+    const welcome = document.getElementById("welcome-message");
+    if (welcome && userName) {
+        welcome.textContent = `Great to see you again, ${userName}`;
+    }
     // Apply theme
     if (userTheme === 'dark') {
         document.body.style.backgroundColor = "#121212";
