@@ -18,6 +18,10 @@ function getCookie(name) {
         localStorage.setItem('theme', userTheme);
         alert(`Great to see you, ${userName}`);
     }
+
+    document.cookie = `name=${userName}; max-age=${60 * 60 * 24 * 7}; path=/`;
+    document.cookie = `theme=${userTheme}; max-age=${60 * 60 * 24 * 7}; path=/`;
+
     // Apply personalized greeting
     const welcome = document.getElementById("welcome-message");
     if (welcome && userName) {
