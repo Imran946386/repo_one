@@ -1,24 +1,24 @@
-// Check and retrieve cookie values (for backward compatibility)
+// Check and retrieve cookie values 
 document.addEventListener('DOMContentLoaded', function() {
-function getCookie(name) {
-    const cookies = document.cookie.split('; ');
-    for (let c of cookies) {
-        const [key, value] = c.split('=');
-        if (key === name) return decodeURIComponent(value);
+    function getCookie(name) {
+        const cookies = document.cookie.split('; ');
+        for (let c of cookies) {
+            const [key, value] = c.split('=');
+            if (key === name) return decodeURIComponent(value);
+        }
+        return null;
     }
-    return null;
-}
     let userName = localStorage.getItem('name');
     let userTheme = localStorage.getItem('theme');
     if (!userName || !userTheme) {
-        // First-time visitor
+        // Prompts for the visitor
         userName = prompt("Welcome to my website! Please enter your name:");
         userTheme = prompt("Choose your preferred theme (dark/light):").toLowerCase();
         localStorage.setItem('name', userName);
         localStorage.setItem('theme', userTheme);
         alert(`Great to see you, ${userName}`);
     }
-
+    
     document.cookie = `name=${userName}; max-age=${60 * 60 * 24 * 7}; path=/`;
     document.cookie = `theme=${userTheme}; max-age=${60 * 60 * 24 * 7}; path=/`;
 
