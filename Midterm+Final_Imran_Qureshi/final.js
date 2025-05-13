@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return null;
     }
-    let userName = localStorage.getItem('name');
-    let userTheme = localStorage.getItem('theme');
+    let userName = getCookie('name');
+    let userTheme = getCookie('theme');
     if (!userName || !userTheme) {
         // Prompts for the visitor
         userName = prompt("Welcome to my website! Please enter your name:");
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('theme', userTheme);
         alert(`Great to see you, ${userName}`);
     }
-    
+
     document.cookie = `name=${userName}; max-age=${60 * 60 * 24 * 7}; path=/`;
     document.cookie = `theme=${userTheme}; max-age=${60 * 60 * 24 * 7}; path=/`;
 
